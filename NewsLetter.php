@@ -61,7 +61,7 @@ if ($result->num_rows > 0)
 	  
 }
 else {
-$sql = "INSERT INTO newsletter (id,name,email,dateTime,received) VALUES (1,'$name','$email',now(),'1')";
+$sql = "INSERT INTO newsletter (name,email,dateTime,received) VALUES ('$name','$email',now(),'1')";
 if($conn->query($sql)== TRUE) 
 {
   $msg_to_user ="<h4><span class='create'>" .$name . " and ". $email . " is created successfully. </span></h4>";
