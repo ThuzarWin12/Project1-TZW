@@ -4,21 +4,21 @@
 <body>
 
 <p>Data manupulation.</p>
-
+<form name="myform" ng-controller="myCtrl">
 <div ng-app="myApp" ng-controller="myCtrl">
 
-First Number: <input type="integer" ng-model="firstNum"><br>
-Second Number: <input type="integer" ng-model="lastNum"><br>
+First Number: <input type="number" ng-model="firstNum"><br>
+Second Number: <input type="number" ng-model="lastNum"><br>
 <br>
 REsult  {{firstNum + lastNum}}
 
 </div>
-
+</form>
 <script>
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope) {
-    $scope.firstNum= 5;
-    $scope.lastNum= 7;
+    $scope.firstNum= 0;
+    $scope.lastNum=0;
 });
 </script>
 
